@@ -1,0 +1,19 @@
+
+
+[staging]
+linux1   ansible_host=107.23.244.128
+
+[test]
+linux3   ansible_host=3.95.147.133
+
+[production]
+linux2   ansible_host=52.90.113.69
+linux4   ansible_host=3.89.138.56
+
+[ami_cred:children]
+test
+production
+
+[deb_cred:children]
+staging
+

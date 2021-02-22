@@ -1,0 +1,15 @@
+
+---
+- name: Loop Playbook
+  hosts: linux1
+  become: yes
+
+
+  tasks:
+  - name: Hello World
+    debug: msg="Hello {{ item }}"
+    with_items:
+     - "Frontend"
+     - ".NET"
+     - "Java"
+
